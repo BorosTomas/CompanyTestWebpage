@@ -27,16 +27,41 @@ A modern demo company webpage built with **React** (Vite) and **Node.js** (Expre
 ├── server/          # Node.js backend (Express)
 │   ├── index.js
 │   └── package.json
+├── package.json     # Root scripts for running everything
 └── README.md
 ```
 
-## Getting Started
+## Quick Start
+
+Run the full application locally with just two commands:
+
+```bash
+# 1. Install all dependencies (root, client, and server)
+npm install && npm run install:all
+
+# 2. Start both frontend and backend together
+npm run dev
+```
+
+- **Frontend** → http://localhost:5173
+- **Backend API** → http://localhost:3001
+
+The Vite dev server automatically proxies `/api` requests to the Express backend.
+
+## Getting Started (Manual)
 
 ### Prerequisites
 
 - Node.js 18+ and npm
 
 ### Install Dependencies
+
+```bash
+# Install all dependencies at once
+npm install && npm run install:all
+```
+
+Or install them individually:
 
 ```bash
 # Install frontend dependencies
@@ -50,7 +75,13 @@ npm install
 
 ### Development
 
-Start both the backend and frontend in separate terminals:
+Start both servers with a single command from the project root:
+
+```bash
+npm run dev
+```
+
+Or start them separately in two terminals:
 
 ```bash
 # Terminal 1 - Start the backend server
@@ -64,12 +95,9 @@ npm run dev
 # Frontend runs on http://localhost:5173
 ```
 
-The Vite dev server proxies `/api` requests to the Express backend automatically.
-
 ### Run Tests
 
 ```bash
-cd client
 npm test
 ```
 
@@ -77,15 +105,13 @@ npm test
 
 ```bash
 # Build the frontend
-cd client
 npm run build
 
 # Start the server in production mode
-cd ../server
-NODE_ENV=production npm start
+npm start
 ```
 
-In production mode, the Express server serves the built React app and handles API routes.
+In production mode, the Express server serves the built React app on http://localhost:3001 and handles API routes.
 
 ## API Endpoints
 
