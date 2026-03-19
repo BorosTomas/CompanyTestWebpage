@@ -493,7 +493,7 @@
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #4a4a5a;
+  color: var(--text-placeholder);
 }
 
 .submit-button {

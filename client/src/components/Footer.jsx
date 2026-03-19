@@ -40,9 +40,9 @@ function Footer() {
         <div className="footer-bottom">
           <p>&copy; 2026 TechVision Solutions. All rights reserved.</p>
           <div className="footer-socials">
-            <a href="#" className="footer-social-link" aria-label="GitHub">⌂</a>
+            <a href="#" className="footer-social-link" aria-label="GitHub">GH</a>
             <a href="#" className="footer-social-link" aria-label="LinkedIn">in</a>
-            <a href="#" className="footer-social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" className="footer-social-link" aria-label="Twitter">X</a>
           </div>
         </div>
       </div>
