@@ -5,7 +5,7 @@ import Contact from './Contact'
 describe('Contact', () => {
   it('renders the section heading', () => {
     render(<Contact />)
-    expect(screen.getByText('Get In Touch')).toBeInTheDocument()
+    expect(screen.getByText(/Build Something Great/)).toBeInTheDocument()
   })
 
   it('renders form fields', () => {
@@ -17,6 +17,6 @@ describe('Contact', () => {
 
   it('renders a submit button', () => {
     render(<Contact />)
-    expect(screen.getByRole('button', { name: 'Submit' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Send Message/ })).toBeInTheDocument()
   })
 })

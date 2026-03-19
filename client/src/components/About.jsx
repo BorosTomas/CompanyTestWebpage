@@ -22,12 +22,13 @@ function About() {
 
   return (
     <section id="about" className="about-section">
-      <h2>About Us</h2>
+      <span className="section-label">About Us</span>
+      <h2>Technologies We Work With</h2>
       <p className="section-description">
-        TechVision Solutions is a forward-thinking software consultancy that
+        TechVision is a forward-thinking software consultancy that
         partners with businesses to design, build, and ship high-quality digital
         products. Our team combines deep technical expertise with a passion for
-        clean architecture to deliver solutions that scale.
+        clean architecture.
       </p>
       <div className="tech-cards">
         {technologies.map((tech) => (

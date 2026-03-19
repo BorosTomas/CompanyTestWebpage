@@ -5,7 +5,7 @@ import About from './About'
 describe('About', () => {
   it('renders the section heading', () => {
     render(<About />)
-    expect(screen.getByText('About Us')).toBeInTheDocument()
+    expect(screen.getByText('Technologies We Work With')).toBeInTheDocument()
   })
 
   it('renders all three technology cards', () => {
