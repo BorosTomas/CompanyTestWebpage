@@ -5,7 +5,7 @@ import Hero from './Hero'
 describe('Hero', () => {
   it('renders the main heading', () => {
     render(<Hero />)
-    expect(screen.getByText('Innovative Software Solutions')).toBeInTheDocument()
+    expect(screen.getByText(/Digital Products/)).toBeInTheDocument()
   })
 
   it('renders the subtitle', () => {
@@ -17,7 +17,7 @@ describe('Hero', () => {
 
   it('renders the call-to-action button', () => {
     render(<Hero />)
-    const cta = screen.getByText('Get Started')
+    const cta = screen.getByText(/Get Started/)
     expect(cta).toBeInTheDocument()
     expect(cta).toHaveAttribute('href', '#contact')
   })

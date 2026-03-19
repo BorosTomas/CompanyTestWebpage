@@ -32,46 +32,72 @@ function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <h2>Get In Touch</h2>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            value={formData.name}
-            onChange={handleChange}
-          />
+      <div className="contact-layout">
+        <div className="contact-info">
+          <span className="section-label">Get In Touch</span>
+          <h2>Let&apos;s Build Something Great Together</h2>
+          <p>
+            Have a project in mind? We&apos;d love to hear about it. Reach out and
+            let&apos;s explore how we can help bring your vision to life.
+          </p>
+          <ul className="contact-details">
+            <li>
+              <span className="contact-details-icon">📧</span>
+              hello@techvision.dev
+            </li>
+            <li>
+              <span className="contact-details-icon">📍</span>
+              San Francisco, CA
+            </li>
+            <li>
+              <span className="contact-details-icon">📞</span>
+              +1 (555) 123-4567
+            </li>
+          </ul>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit" className="submit-button">Submit</button>
-        {status && (
-          <p className={`form-status ${status.type}`}>{status.text}</p>
-        )}
-      </form>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your full name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell us about your project..."
+              required
+              value={formData.message}
+              onChange={handleChange}
+            />
+          </div>
+          <button type="submit" className="submit-button">Send Message →</button>
+          {status && (
+            <p className={`form-status ${status.type}`}>{status.text}</p>
+          )}
+        </form>
+      </div>
     </section>
   )
 }
